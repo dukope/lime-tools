@@ -1009,6 +1009,10 @@ class HXProject {
 		compilerFlags.push ("-D " + Std.string (platformType).toLowerCase ());
 		compilerFlags = compilerFlags.concat (haxeflags);
 		
+		var uniqueCompilerFlags = [];
+		for (c in compilerFlags) { if (!Lambda.has(uniqueCompilerFlags, c)) uniqueCompilerFlags.push(c); }
+		compilerFlags = uniqueCompilerFlags;
+
 		if (compilerFlags.length == 0) {
 			
 			context.HAXE_FLAGS = "";

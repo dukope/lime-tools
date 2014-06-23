@@ -1,7 +1,7 @@
 package helpers;
 
 
-#if (flash || openfl || nme)
+#if (flash || nme)
 import openfl.utils.ByteArray;
 #end
 import haxe.crypto.BaseCode;
@@ -18,7 +18,7 @@ class StringHelper {
 	private static var uuidChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	
 	
-	#if (flash || openfl || nme)
+	#if (flash || nme)
 	
 	public static function base64Decode (base64:String):ByteArray {
 		
